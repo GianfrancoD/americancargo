@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import { Menu, X } from "lucide-react";
-import logo from "../../assets/logo.jpeg";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,9 +18,9 @@ export function Navbar() {
             className="text-2xl font-bold flex items-center space-x-2"
           >
             <img
-              src={logo}
+              src="https://zoom.red/wp-content/uploads/2021/01/Logo-Zoom-Registrado.png"
               alt="Suramérica Cargo"
-              className="h-[10vh] w-auto"
+              className="h-[7vh] w-auto"
             />
           </a>
           <nav className="hidden md:flex space-x-8">
