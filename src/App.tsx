@@ -14,14 +14,36 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Hero />
-      <AboutUs />
-      <Services />
-      <Tracking />
-      <SimpleSteps />
-      <ShippingCalculator />
-      <Offices />
+      <section id="hero" className="py-0">
+        <Hero />
+      </section>
+
+      <section id="quiénes-somos" className="py-0">
+        <AboutUs />
+      </section>
+
+      <section id="servicios" className="py-0">
+        <Services />
+      </section>
+
+      <section id="seguimiento" className="py-0">
+        <Tracking />
+      </section>
+
+      <section id="pasos-simples" className="py-0">
+        <SimpleSteps />
+      </section>
+
+      <section id="calculadora" className="py-0">
+        <ShippingCalculator />
+      </section>
+
+      <section id="oficinas" className="py-0">
+        <Offices />
+      </section>
+
       <SocialMedia />
+
       <Footer />
     </div>
   );

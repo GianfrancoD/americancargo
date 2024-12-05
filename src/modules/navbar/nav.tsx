@@ -19,7 +19,6 @@ export function Navbar() {
             className="text-2xl font-bold flex items-center space-x-2"
           >
             <img
-              // src="https://www.suramericacargo.com/img/logo.png"
               src={logo}
               alt="Suramérica Cargo"
               className="h-[10vh] w-auto"

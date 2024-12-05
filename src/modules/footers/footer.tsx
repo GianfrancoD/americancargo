@@ -12,19 +12,19 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-blue-900 to-blue-500 text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4">
-          <div className="space-y-4">
+        <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4 max-[768px]:place-content-center max-[768px]:place-items-center">
+          <div className="space-y-4 max-[768px]:flex max-[768px]:flex-col max-[768px]:justify-center max-[768px]:items-center">
             <img
               src={logo}
               alt="Suramérica Cargo"
-              className="h-[15vh] w-auto"
+              className="h-[15vh] max-[768px]:h-[25vh] w-auto max-[768px]:w-[50vw]"
             />
-            <p className="text-blue-200">
+            <p className="text-blue-200 max-[768px]:text-center">
               Conectando negocios globalmente con soluciones logísticas
               innovadoras.
             </p>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 max-[768px]:text-center">
             <h3 className="text-xl font-semibold mb-2">Servicios</h3>
             <ul className="space-y-2">
               <li>
@@ -53,25 +53,27 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-4 max-[768px]:text-center">
             <h3 className="text-xl font-semibold mb-2">Contacto</h3>
             <ul className="space-y-2">
-              <li className="flex items-center">
+              <li className="flex items-center max-[768px]:justify-center">
                 <Phone size={18} className="mr-2" />
                 <span>+1 234 567 890</span>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center max-[768px]:flex max-[768px]:justify-center">
                 <Mail size={18} className="mr-2" />
                 <span>info@suramericacargo.com</span>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center max-[768px]:flex max-[768px]:justify-center">
                 <MapPin size={18} className="mr-2" />
                 <span>Calle Principal 123, Ciudad</span>
               </li>
             </ul>
           </div>
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold mb-2">Síguenos</h3>
+          <div className="space-y-4 max-[768px]:flex max-[768px]:flex-col max-[768px]:justify-center">
+            <h3 className="text-xl font-semibold mb-2 max-[768px]:text-center">
+              Síguenos
+            </h3>
             <div className="flex space-x-4">
               <a
                 href="/"

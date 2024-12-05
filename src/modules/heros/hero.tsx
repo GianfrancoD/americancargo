@@ -20,9 +20,6 @@ export function Hero() {
           </span>{" "}
           y eficientes para sus envíos internacionales
         </p>
-        <button className="bg-blue-300 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all transform hover:scale-105">
-          Comenzar Ahora
-        </button>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {[
             {
