@@ -17,7 +17,7 @@ export function Footer() {
             <img
               src={logo}
               alt="Suramérica Cargo"
-              className="h-[10vh] w-auto"
+              className="h-[15vh] w-auto"
             />
             <p className="text-blue-200">
               Conectando negocios globalmente con soluciones logísticas
