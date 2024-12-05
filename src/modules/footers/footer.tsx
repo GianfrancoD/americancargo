@@ -6,17 +6,18 @@ import {
   Phone,
   Mail,
 } from "lucide-react";
+import logo from "../../assets/logo.jpeg";
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-16">
+    <footer className="bg-gradient-to-b from-blue-900 to-blue-500 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4">
           <div className="space-y-4">
             <img
-              src="https://www.suramericacargo.com/img/logo.png"
+              src={logo}
               alt="Suramérica Cargo"
-              className="h-[10vh] w-auto" // Ajusta el tamaño según sea necesario
+              className="h-[10vh] w-auto"
             />
             <p className="text-blue-200">
               Conectando negocios globalmente con soluciones logísticas

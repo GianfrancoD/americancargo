@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { Menu, X } from "lucide-react";
+import logo from "../../assets/logo.jpeg";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,9 +19,10 @@ export function Navbar() {
             className="text-2xl font-bold flex items-center space-x-2"
           >
             <img
-              src="https://www.suramericacargo.com/img/logo.png"
+              // src="https://www.suramericacargo.com/img/logo.png"
+              src={logo}
               alt="Suramérica Cargo"
-              className="h-[7vh] w-auto" // Ajusta el tamaño según sea necesario
+              className="h-[10vh] w-auto"
             />
           </a>
           <nav className="hidden md:flex space-x-8">
