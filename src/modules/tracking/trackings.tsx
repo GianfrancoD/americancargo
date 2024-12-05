@@ -17,7 +17,7 @@ export function Tracking() {
       className="py-24 bg-gradient-to-b from-white to-blue-50"
     >
       <div className="container mx-auto px-4 relative">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full -mr-32 -mt-32 opacity-50"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full -mr-32 -mt-32 opacity-50 max-[1024px]:hidden"></div>
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-100 rounded-full -ml-32 -mb-32 opacity-50"></div>
         <div className="relative z-10">
           <h2 className="text-5xl font-bold text-center mb-6 text-blue-600">
