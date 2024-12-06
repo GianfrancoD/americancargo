@@ -12,7 +12,6 @@ export function ShippingCalculator() {
     height: number;
   }>({ length: 0, width: 0, height: 0 });
 
-  // Definición de tipos para los países
   type Country = "colombia" | "peru" | "ecuador" | "usa" | "spain" | "china";
 
   const [originCountry, setOriginCountry] = useState<Country | "">("");
@@ -27,9 +26,9 @@ export function ShippingCalculator() {
     colombia: { aereo: 49.9, maritimo: 36, terrestre: 7 },
     peru: { aereo: 49.9, maritimo: 36, terrestre: 8 },
     ecuador: { aereo: 49.9, maritimo: 36, terrestre: 7.5 },
-    usa: { aereo: 49.9, maritimo: 36, terrestre: 10 },
-    spain: { aereo: 49.9, maritimo: 36, terrestre: 9 },
-    china: { aereo: 49.9, maritimo: 36, terrestre: 12 },
+    usa: { aereo: 60.0, maritimo: 50.0, terrestre: 10 },
+    spain: { aereo: 55.0, maritimo: 40.0, terrestre: 9 },
+    china: { aereo: 70.0, maritimo: 50.0, terrestre: 0 },
   };
 
   const calculateShipping = (e: React.FormEvent) => {
@@ -49,7 +48,6 @@ export function ShippingCalculator() {
     const volume = dimensions.length * dimensions.width * dimensions.height;
     let cost = 0;
 
-    // Obtener las tarifas según el país de origen y destino
     const originRates = shippingRates[originCountry as Country];
     const destinationRates = shippingRates[destinationCountry as Country];
 
@@ -123,6 +121,9 @@ export function ShippingCalculator() {
                   <option value="colombia">Colombia</option>
                   <option value="peru">Perú</option>
                   <option value="ecuador">Ecuador</option>
+                  <option value="china">China</option>
+                  <option value="usa">Estados Unidos</option>
+                  <option value="spain">España</option>
                 </select>
               </div>
               <div>
@@ -137,13 +138,16 @@ export function ShippingCalculator() {
                   value={destinationCountry}
                   onChange={(e) =>
                     setDestinationCountry(e.target.value as Country)
-                  } // Conversión al tipo correcto
+                  }
                   className="w-full p-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
                 >
                   <option value="">Seleccionar destino</option>
                   <option value="usa">Estados Unidos</option>
                   <option value="spain">España</option>
                   <option value="china">China</option>
+                  <option value="colombia">Colombia</option>
+                  <option value="peru">Perú</option>
+                  <option value="ecuador">Ecuador</option>
                 </select>
               </div>
             </div>
