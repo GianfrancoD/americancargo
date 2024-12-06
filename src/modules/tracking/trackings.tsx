@@ -5,10 +5,35 @@ import { useState } from "react";
 export function Tracking() {
   const [trackingNumber, setTrackingNumber] = useState("");
   const [trackingResult, setTrackingResult] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
-  const handleTracking = (e: React.FormEvent) => {
+  const handleTracking = async (e: React.FormEvent) => {
     e.preventDefault();
-    setTrackingResult("Su envío está en tránsito y llegará en 2 días.");
+    setLoading(true);
+
+    try {
+      const response = await fetch(
+        `https://api.enviosuramerica.com/services-web/tracking-guia?trackingNumber=${trackingNumber}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Error al obtener los datos del seguimiento");
+      }
+
+      const data = await response.json();
+      setTrackingResult(data.message || "Información no disponible");
+    } catch (error) {
+      console.error("Error:", error);
+      setTrackingResult("No se pudo obtener información del seguimiento.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -48,9 +73,12 @@ export function Tracking() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors text-lg font-semibold"
+                className={`w-full bg-blue-500 text-white py-3 px-4 rounded-lg hover:bg-blue-600 transition-colors text-lg font-semibold ${
+                  loading ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                disabled={loading}
               >
-                Rastrear Envío
+                {loading ? "Cargando..." : "Rastrear Envío"}
               </button>
             </form>
             {trackingResult && (
