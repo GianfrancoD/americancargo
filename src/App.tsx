@@ -1,8 +1,10 @@
+// src/app/page.tsx o donde estés definiendo tus rutas
 import "./App.css";
 import { AboutUs } from "./modules/about/about-us";
 import { FeaturedImages } from "./modules/focus/focus";
 import { Footer } from "./modules/footers/footer";
 import { Hero } from "./modules/heros/hero";
+import RootLayout from "./modules/layout";
 import { Navbar } from "./modules/navbar/nav";
 import { Offices } from "./modules/offices/office";
 import { Services } from "./modules/servis/services";
@@ -14,7 +16,7 @@ import { WhatsAppButton } from "./modules/WhatsAppButton";
 
 function App() {
   return (
-    <div className="App">
+    <RootLayout>
       <Navbar />
       <section id="hero" className="py-0">
         <Hero />
@@ -49,7 +51,7 @@ function App() {
       <WhatsAppButton phoneNumber="+51927612947" />
       <SocialMedia />
       <Footer />
-    </div>
+    </RootLayout>
   );
 }
 
