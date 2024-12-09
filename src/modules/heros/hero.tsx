@@ -21,9 +21,9 @@ export function Hero() {
           internacionales en un mundo cada vez más conectado
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-          <button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-800 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-700 hover:to-blue-900 transition-all transform hover:scale-105 shadow-lg">
+          {/* <button className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-800 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-700 hover:to-blue-900 transition-all transform hover:scale-105 shadow-lg">
             Comenzar Ahora
-          </button>
+          </button> */}
           <a
             href="#services"
             className="w-full sm:w-auto text-white border-2 border-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-800 transition-all flex items-center justify-center"

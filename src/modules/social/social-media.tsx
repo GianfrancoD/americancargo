@@ -1,4 +1,19 @@
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
+
+type Redes = { id: number; icon: JSX.Element; name: string };
+
+const redes: Redes[] = [
+  {
+    id: 1,
+    name: "facebook",
+    icon: <Facebook size={32} className="text-blue-600" />,
+  },
+  {
+    id: 2,
+    name: "instagram",
+    icon: <Instagram size={32} className="text-blue-600" />,
+  },
+];
 
 export function SocialMedia() {
   return (
@@ -11,30 +26,19 @@ export function SocialMedia() {
         </h2>
         <p className="text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           Mantente informado sobre nuestras últimas novedades y ofertas
-          especiales
+          especiales.
         </p>
         <div className="flex justify-center items-center space-x-8">
-          {["facebook", "instagram", "twitter", "linkedin"].map((platform) => (
+          {redes.map((platform) => (
             <a
-              key={platform}
-              href={`https://www.${platform}.com/suramericacargo`}
+              key={platform.id}
+              href={`https://www.${platform.name}.com/suramericacargo`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              <span className="sr-only">{platform}</span>
-              {platform === "facebook" && (
-                <Facebook size={32} className="text-blue-600" />
-              )}
-              {platform === "instagram" && (
-                <Instagram size={32} className="text-pink-600" />
-              )}
-              {platform === "twitter" && (
-                <Twitter size={32} className="text-blue-400" />
-              )}
-              {platform === "linkedin" && (
-                <Linkedin size={32} className="text-blue-700" />
-              )}
+              <span className="sr-only">{platform.name}</span>
+              {platform.icon}
             </a>
           ))}
         </div>

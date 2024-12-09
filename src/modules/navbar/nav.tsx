@@ -1,6 +1,7 @@
 import { useState } from "react";
-
 import { Menu, X } from "lucide-react";
+import logotipo from "../../assets/logotipo.png";
+import { scrollToAll } from "../../services/scrollServices";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,34 +14,39 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full bg-white text-blue-600 shadow-lg">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <a
-            href="/"
+          <button
+            onClick={() => scrollToAll("hero")}
             className="text-2xl font-bold flex items-center space-x-2"
           >
             <img
-              src="https://zoom.red/wp-content/uploads/2021/01/Logo-Zoom-Registrado.png"
+              src={logotipo}
               alt="Suramérica Cargo"
-              className="h-[7vh] w-auto"
+              className="h-[10vh] w-auto"
             />
-          </a>
+          </button>
           <nav className="hidden md:flex space-x-8">
             {[
-              "Quiénes Somos",
               "Servicios",
               "Calculadora",
               "Seguimiento",
               "Oficinas",
+              "Quiénes Somos",
             ].map((item) => (
-              <a
+              <button
                 key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+                onClick={() =>
+                  scrollToAll(item.toLowerCase().replace(" ", "-"))
+                }
                 className="text-blue-600 hover:text-blue-800 transition-colors"
               >
                 {item}
-              </a>
+              </button>
             ))}
           </nav>
-          <button className="hidden md:block bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">
+          <button
+            onClick={() => scrollToAll("footer")}
+            className="hidden md:block bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors"
+          >
             Contacto
           </button>
           <button
@@ -62,16 +68,21 @@ export function Navbar() {
               "Seguimiento",
               "Oficinas",
             ].map((item) => (
-              <a
+              <button
                 key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+                onClick={() =>
+                  scrollToAll(item.toLowerCase().replace(" ", "-"))
+                }
                 className="py-2 text-blue-600 hover:text-blue-800 transition-colors"
-                onClick={toggleMenu}
+                // onClick={toggleMenu}
               >
                 {item}
-              </a>
+              </button>
             ))}
-            <button className="mt-4 bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors">
+            <button
+              onClick={() => scrollToAll("footer")}
+              className="mt-4 bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-colors"
+            >
               Contacto
             </button>
           </nav>

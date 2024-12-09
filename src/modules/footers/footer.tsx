@@ -1,23 +1,19 @@
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  MapPin,
-  Phone,
-  Mail,
-} from "lucide-react";
-import logo from "../../assets/logo.jpeg";
+import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
+import logosinfondo from "../../assets/logosinfondo.png";
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-blue-900 to-blue-500 text-white py-16">
+    <footer
+      className="bg-gradient-to-b from-blue-900 to-blue-500 text-white py-16"
+      id="footer"
+    >
       <div className="container mx-auto px-4">
         <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4 max-[768px]:place-content-center max-[768px]:place-items-center">
           <div className="space-y-4 max-[768px]:flex max-[768px]:flex-col max-[768px]:justify-center max-[768px]:items-center">
             <img
-              src={logo}
+              src={logosinfondo}
               alt="Suramérica Cargo"
-              className="h-[15vh] max-[768px]:h-[25vh] w-auto max-[768px]:w-[50vw]"
+              className="h-[15vh] max-[768px]:h-[25vh] w-auto max-[768px]:w-[50vw] bg-white rounded-full"
             />
             <p className="text-blue-200 max-[768px]:text-center">
               Conectando negocios globalmente con soluciones logísticas
@@ -58,7 +54,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li className="flex items-center max-[768px]:justify-center">
                 <Phone size={18} className="mr-2" />
-                <span>+1 234 567 890</span>
+                <span>+51927613970</span>
               </li>
               <li className="flex items-center max-[768px]:flex max-[768px]:justify-center">
                 <Mail size={18} className="mr-2" />
@@ -66,7 +62,7 @@ export function Footer() {
               </li>
               <li className="flex items-center max-[768px]:flex max-[768px]:justify-center">
                 <MapPin size={18} className="mr-2" />
-                <span>Calle Principal 123, Ciudad</span>
+                <span>Av. Alfredo Mendiola 3471 Los Olivos, Lima</span>
               </li>
             </ul>
           </div>
@@ -82,13 +78,13 @@ export function Footer() {
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a
+              {/* <a
                 href="/"
                 className="bg-blue-700 p-2 rounded-full hover:bg-blue-600 transition-colors"
               >
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
-              </a>
+              </a> */}
               <a
                 href="/"
                 className="bg-blue-700 p-2 rounded-full hover:bg-blue-600 transition-colors"
@@ -100,7 +96,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-blue-700 text-center text-sm text-blue-300">
-          © {new Date().getFullYear()} Suramérica Cargo. Todos los derechos
+          © {new Date().getFullYear()} Sur América Cargo. Todos los derechos
           reservados.
         </div>
       </div>

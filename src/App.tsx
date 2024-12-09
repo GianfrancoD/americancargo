@@ -1,5 +1,6 @@
 import "./App.css";
 import { AboutUs } from "./modules/about/about-us";
+import { FeaturedImages } from "./modules/focus/focus";
 import { Footer } from "./modules/footers/footer";
 import { Hero } from "./modules/heros/hero";
 import { Navbar } from "./modules/navbar/nav";
@@ -39,11 +40,13 @@ function App() {
         <ShippingCalculator />
       </section>
 
+      <FeaturedImages />
+
       <section id="oficinas" className="py-0">
         <Offices />
       </section>
 
-      <WhatsAppButton phoneNumber="+584148889666" />
+      <WhatsAppButton phoneNumber="+51927612947" />
       <SocialMedia />
       <Footer />
     </div>

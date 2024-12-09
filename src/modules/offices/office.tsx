@@ -1,23 +1,26 @@
 export function Offices() {
   const offices = [
     {
-      city: "Bogotá",
-      address: "Calle 100 #19-61, Oficina 801",
+      city: "La Victoria",
+      address:
+        "Av Aviación 950 CC. Gama plaza Moda 2do piso Local SN 193 - Local ZOOM",
       phone: "+57 1 234 5678",
     },
     {
-      city: "Lima",
-      address: "Av. Javier Prado Este 444, San Isidro",
+      city: "Los Olivos",
+      address:
+        "Av. Alfredo Mendiola 3471, frnte a Meda Plaza, 2do piso Galeria Dolares",
       phone: "+51 1 234 5678",
     },
     {
-      city: "Quito",
-      address: "Av. Amazonas N37-29 y UNP, Edificio Eurocenter",
+      city: "Santa Anita",
+      address:
+        "Av. Nicolás Ayllón N 3080 Ate - Lima. C. C. Jessie Stand W11. Frente al Mall Aventura",
       phone: "+593 2 234 5678",
     },
     {
-      city: "Miami",
-      address: "801 Brickell Ave, Suite 900",
+      city: "Breña",
+      address: "Av. Venezuela 1179 C.C Estrella Plaza Local 136",
       phone: "+1 305 234 5678",
     },
   ];
