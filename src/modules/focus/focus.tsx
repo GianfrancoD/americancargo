@@ -26,10 +26,10 @@ export function FeaturedImages() {
     <section className="py-32 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-blue-100/[0.2] bg-[size:20px_20px]" />
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-800">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-500">
           Nuestro Enfoque
         </h2>
-        <p className="text-xl text-center mb-16 text-blue-600 max-w-3xl mx-auto">
+        <p className="text-xl text-center mb-16 text-gray-400 max-w-3xl mx-auto">
           Combinamos experiencia logística con tecnología de vanguardia para
           ofrecer soluciones de transporte excepcionales
         </p>

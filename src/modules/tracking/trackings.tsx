@@ -16,10 +16,10 @@ export const Tracking = () => {
       className="py-24 bg-gradient-to-b from-white to-blue-50"
     >
       <div className="container mx-auto px-4 relative">
-        <h2 className="text-5xl font-bold text-center mb-6 text-blue-600">
+        <h2 className="text-5xl font-bold text-center mb-6 text-blue-500">
           Seguimiento de Envío
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-center text-lg">
+        <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-center text-lg">
           Rastrea tu envío en tiempo real y mantente informado sobre su
           ubicación y estado actual.
         </p>

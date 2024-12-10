@@ -26,10 +26,10 @@ export function SimpleSteps() {
     <section className="py-24 bg-gradient-to-b from-white to-blue-50 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-blue-100/[0.2] bg-[size:20px_20px]" />
       <div className="relative container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-800">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-500">
           3 Sencillos Pasos
         </h2>
-        <p className="text-xl text-center mb-16 max-w-2xl mx-auto text-gray-600">
+        <p className="text-xl text-center mb-16 max-w-2xl mx-auto text-gray-400">
           Descubre cómo nuestro proceso simplifica tus envíos internacionales
         </p>
         <div className="grid md:grid-cols-3 gap-8">

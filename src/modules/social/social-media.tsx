@@ -21,10 +21,10 @@ export function SocialMedia() {
       <div className="absolute top-0 left-0 w-64 h-64 bg-blue-100 rounded-full -ml-32 -mt-32 opacity-30"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-100 rounded-full -mr-32 -mb-32 opacity-30"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl font-bold text-center text-blue-700 mb-4">
+        <h2 className="text-4xl font-bold text-center text-blue-500 mb-4">
           Conéctate con Nosotros
         </h2>
-        <p className="text-xl text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-xl text-center text-gray-400 mb-12 max-w-2xl mx-auto">
           Mantente informado sobre nuestras últimas novedades y ofertas
           especiales.
         </p>

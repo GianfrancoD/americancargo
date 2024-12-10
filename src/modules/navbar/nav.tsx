@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logotipo from "../../assets/logotipo.png";
+import logotipos from "../../assets/logotipos.png";
 import { scrollToAll } from "../../services/scrollServices";
 
 export function Navbar() {
@@ -19,9 +19,9 @@ export function Navbar() {
             className="text-2xl font-bold flex items-center space-x-2"
           >
             <img
-              src={logotipo}
+              src={logotipos}
               alt="Suramérica Cargo"
-              className="h-[10vh] w-auto"
+              className="h-[10vh] w-auto rounded-lg"
             />
           </button>
           <nav className="hidden md:flex space-x-8">

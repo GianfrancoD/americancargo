@@ -5,24 +5,24 @@ export function Services() {
   const services = [
     {
       icon: <Plane className="h-8 w-8" />,
-      title: "Air Freight",
+      title: "Transporte aereo",
       description:
         "Soluciones globales de transporte aéreo para cargas urgentes",
     },
     {
       icon: <Ship className="h-8 w-8" />,
-      title: "Sea Freight",
+      title: "Transporte marítimo",
       description:
         "Servicios confiables de transporte marítimo en todo el mundo",
     },
     {
       icon: <Truck className="h-8 w-8" />,
-      title: "Land Transport",
+      title: "Transporte terrestre",
       description: "Soluciones eficientes de transporte terrestre",
     },
     {
       icon: <Package className="h-8 w-8" />,
-      title: "Express Services",
+      title: "Servicios Express",
       description: "Servicios de entrega rápidos y seguros",
     },
   ];
@@ -33,10 +33,10 @@ export function Services() {
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-100 rounded-full -mr-32 -mb-32 opacity-30"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-600 mb-4">
+          <h2 className="text-4xl font-bold text-blue-500 mb-4">
             Nuestros Servicios
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Soluciones logísticas integrales adaptadas a sus necesidades
             globales
           </p>

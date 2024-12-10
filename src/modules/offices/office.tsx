@@ -38,7 +38,7 @@ export const Offices = () => {
           <h2 className="text-4xl font-bold text-blue-500 mb-4">
             Nuestras Oficinas
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto">
             Estamos presentes en las principales ciudades para atender tus
             necesidades logísticas
           </p>
