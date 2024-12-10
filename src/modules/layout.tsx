@@ -4,11 +4,9 @@
 import { useState, useEffect } from "react";
 import { LoadingScreen } from "./letterLoading";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+type children = { children: React.ReactNode };
+
+const RootLayout = ({ children }: children) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -20,8 +18,11 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang="es">
-      <body>{isLoading ? <LoadingScreen /> : children}</body>
-    </html>
+    <>
+      <html lang="es">
+        <body>{isLoading ? <LoadingScreen /> : children}</body>
+      </html>
+    </>
   );
-}
+};
+export default RootLayout;
