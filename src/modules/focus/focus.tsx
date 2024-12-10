@@ -27,7 +27,7 @@ export function FeaturedImages() {
       <div className="absolute inset-0 bg-grid-blue-100/[0.2] bg-[size:20px_20px]" />
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-blue-500">
-          Nuestro Enfoque
+          Nuestro operadores logística
         </h2>
         <p className="text-xl text-center mb-16 text-gray-400 max-w-3xl mx-auto">
           Combinamos experiencia logística con tecnología de vanguardia para
