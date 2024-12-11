@@ -1,17 +1,19 @@
 import { Facebook, Instagram } from "lucide-react";
 
-type Redes = { id: number; icon: JSX.Element; name: string };
+type Redes = { id: number; icon: JSX.Element; name: string; url: string };
 
 const redes: Redes[] = [
   {
     id: 1,
     name: "facebook",
     icon: <Facebook size={32} className="text-blue-600" />,
+    url: "",
   },
   {
     id: 2,
     name: "instagram",
     icon: <Instagram size={32} className="text-blue-600" />,
+    url: "envioszoom",
   },
 ];
 
@@ -32,7 +34,7 @@ export function SocialMedia() {
           {redes.map((platform) => (
             <a
               key={platform.id}
-              href={`https://www.${platform.name}.com/suramericacargo`}
+              href={`https://www.${platform.name}.com/${platform.url}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"

@@ -12,7 +12,14 @@ export function ShippingCalculator() {
     height: number;
   }>({ length: 0, width: 0, height: 0 });
 
-  type Country = "colombia" | "peru" | "ecuador" | "usa" | "spain" | "china";
+  type Country =
+    | "colombia"
+    | "peru"
+    | "ecuador"
+    | "usa"
+    | "spain"
+    | "china"
+    | "venezuela";
 
   const [originCountry, setOriginCountry] = useState<Country | "">("");
   const [destinationCountry, setDestinationCountry] = useState<Country | "">(
@@ -29,6 +36,7 @@ export function ShippingCalculator() {
     usa: { aereo: 60.0, maritimo: 50.0, terrestre: 10 },
     spain: { aereo: 55.0, maritimo: 40.0, terrestre: 9 },
     china: { aereo: 70.0, maritimo: 50.0, terrestre: 0 },
+    venezuela: { aereo: 49.9, maritimo: 36, terrestre: 7 },
   };
 
   const calculateShipping = (e: React.FormEvent) => {
@@ -124,6 +132,7 @@ export function ShippingCalculator() {
                   <option value="china">China</option>
                   <option value="usa">Estados Unidos</option>
                   <option value="spain">España</option>
+                  <option value="venezuela">Venezuela</option>
                 </select>
               </div>
               <div>
@@ -148,6 +157,7 @@ export function ShippingCalculator() {
                   <option value="colombia">Colombia</option>
                   <option value="peru">Perú</option>
                   <option value="ecuador">Ecuador</option>
+                  <option value="venezuela">Venezuela</option>
                 </select>
               </div>
             </div>
