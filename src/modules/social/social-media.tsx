@@ -7,7 +7,7 @@ const redes: Redes[] = [
     id: 1,
     name: "facebook",
     icon: <Facebook size={32} className="text-blue-600" />,
-    url: "",
+    url: "61557105217820",
   },
   {
     id: 2,

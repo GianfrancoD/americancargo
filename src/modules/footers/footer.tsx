@@ -72,21 +72,15 @@ export function Footer() {
             </h3>
             <div className="flex space-x-4">
               <a
-                href="/"
+                href="https://www.facebook.com/people/Envios-Internacionales/61557105217820/"
                 className="bg-blue-700 p-2 rounded-full hover:bg-blue-600 transition-colors"
               >
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </a>
-              {/* <a
-                href="/"
-                className="bg-blue-700 p-2 rounded-full hover:bg-blue-600 transition-colors"
-              >
-                <Twitter size={20} />
-                <span className="sr-only">Twitter</span>
-              </a> */}
+
               <a
-                href="/"
+                href="https://www.instagram.com/envioszoom/"
                 className="bg-blue-700 p-2 rounded-full hover:bg-blue-600 transition-colors"
               >
                 <Instagram size={20} />
