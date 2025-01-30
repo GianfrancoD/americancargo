@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Book, Menu, X } from "lucide-react";
 import logotipos from "../../assets/logotipos.png";
 import { scrollToAll } from "../../services/scrollServices";
 
@@ -85,6 +85,12 @@ export function Navbar() {
             >
               Contacto
             </button>
+            <div className="flex gap-1 relative mt-8 pt-5 border-t border-grey-500 text-sm min-w-[320px]:w-28 w-auto">
+              <Book width={16} />
+              <button className="text-blue-500 hover:text-blue-900">
+                Terminos y Condiciones
+              </button>
+            </div>
           </nav>
         </div>
       )}

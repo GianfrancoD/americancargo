@@ -1,9 +1,17 @@
 import { MapPin, Phone } from "lucide-react";
 
 export const Offices = () => {
-  const offices = [
+  interface Offices {
+    city: string;
+    Ofice?: string;
+    address: string;
+    phone?: string;
+    icon: JSX.Element;
+  }
+  const offices: Offices[] = [
     {
       city: "La Victoria",
+      Ofice: "Oficina Principal",
       address:
         "Av Aviación 950 CC. Gama plaza Moda 2do piso Local SN 193 - Local ZOOM",
       phone: "+51 927613970",
@@ -55,6 +63,9 @@ export const Offices = () => {
                 <h3 className="text-xl font-semibold ml-2 text-blue-500">
                   {office.city}
                 </h3>
+                <span className="text-xs px-1 text-white font-bold absolute bg-blue-400 rounded-md top-[3.3rem]">
+                  {office.Ofice}
+                </span>
               </div>
               <p className="text-gray-600 mb-2">{office.address}</p>
               {office.phone && (

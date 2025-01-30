@@ -48,6 +48,12 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+
+            <div className="relative mt-12 pt-5 border-t border-white/50 text-sm min-w-[320px]:w-28 w-28">
+              <button className="text-blue-100/50 hover:text-blue-800">
+                Terminos y Condiciones
+              </button>
+            </div>
           </div>
           <div className="space-y-4 max-[768px]:text-center">
             <h3 className="text-xl font-semibold mb-2">Contacto</h3>

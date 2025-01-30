@@ -66,19 +66,19 @@ export function ShippingCalculator() {
 
     switch (shippingType) {
       case "aereo":
-        cost = originRates.aereo * weight + (volume / 1000000) * 10;
+        cost = originRates.aereo * weight + (volume / 5000) * 10.9;
         break;
       case "maritimo":
-        cost = originRates.maritimo * weight + (volume / 1000000) * 5;
+        cost = originRates.maritimo * weight + (volume / 5000) * 7.89;
         break;
       case "terrestre":
-        cost = originRates.terrestre * weight + (volume / 1000000) * 7.5;
+        cost = originRates.terrestre * weight + (volume / 5000) * 7.59;
         break;
       default:
         break;
     }
 
-    setResult(cost);
+    setResult(Math.round(cost));
   };
 
   return (
