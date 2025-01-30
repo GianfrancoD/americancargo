@@ -30,13 +30,13 @@ export function ShippingCalculator() {
     Country,
     { aereo: number; maritimo: number; terrestre: number }
   > = {
-    colombia: { aereo: 49.9, maritimo: 36, terrestre: 7 },
-    peru: { aereo: 49.9, maritimo: 36, terrestre: 8 },
-    ecuador: { aereo: 49.9, maritimo: 36, terrestre: 7.5 },
-    usa: { aereo: 60.0, maritimo: 50.0, terrestre: 10 },
-    spain: { aereo: 55.0, maritimo: 40.0, terrestre: 9 },
-    china: { aereo: 70.0, maritimo: 50.0, terrestre: 0 },
-    venezuela: { aereo: 49.9, maritimo: 36, terrestre: 7 },
+    colombia: { aereo: 49.9, maritimo: 8, terrestre: 9 },
+    peru: { aereo: 49.9, maritimo: 8, terrestre: 9 },
+    ecuador: { aereo: 49.9, maritimo: 8, terrestre: 9 },
+    usa: { aereo: 49.9, maritimo: 8, terrestre: 9 },
+    spain: { aereo: 49.9, maritimo: 8, terrestre: 9 },
+    china: { aereo: 49.9, maritimo: 8, terrestre: 9 },
+    venezuela: { aereo: 49.9, maritimo: 8, terrestre: 9 },
   };
 
   const calculateShipping = (e: React.FormEvent) => {
