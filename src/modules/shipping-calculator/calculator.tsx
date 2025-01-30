@@ -66,13 +66,13 @@ export function ShippingCalculator() {
 
     switch (shippingType) {
       case "aereo":
-        cost = originRates.aereo * weight + 2 * volume;
+        cost = originRates.aereo * weight + (volume / 1000000) * 10;
         break;
       case "maritimo":
-        cost = originRates.maritimo * weight + 1 * volume;
+        cost = originRates.maritimo * weight + (volume / 1000000) * 5;
         break;
       case "terrestre":
-        cost = originRates.terrestre * weight + 1.5 * volume;
+        cost = originRates.terrestre * weight + (volume / 1000000) * 7.5;
         break;
       default:
         break;
