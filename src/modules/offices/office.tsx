@@ -37,6 +37,19 @@ export const Offices = () => {
       phone: "",
       icon: <MapPin className="w-6 h-6 text-blue-500" />,
     },
+    {
+      city: "Cercado de Lima",
+      address:
+        "Av. Grau con Avancay, Stand 1069 Cercado de Lima. C.C. Señor de Luren",
+      phone: "",
+      icon: <MapPin className="w-6 h-6 text-blue-500" />,
+    },
+    {
+      city: "Chorrillos",
+      address: "Av. Defensores del Morro 666, Galeria Huayla Chorrillos",
+      phone: "",
+      icon: <MapPin className="w-6 h-6 text-blue-500" />,
+    },
   ];
 
   return (
