@@ -1,5 +1,5 @@
 import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
-import logosinfondo from "../../assets/logosinfondo.png";
+import logotipoFooter from "../../assets/logoZOOM2.png";
 import { useState } from "react";
 import { TermsModal } from "../modals/modalsFooters";
 
@@ -14,9 +14,9 @@ export function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 md:grid-cols-4 max-[768px]:place-content-center max-[768px]:place-items-center">
           <div className="space-y-4 max-[768px]:flex max-[768px]:flex-col max-[768px]:justify-center max-[768px]:items-center">
             <img
-              src={logosinfondo}
+              src={logotipoFooter}
               alt="Suramérica Cargo"
-              className="h-[15vh] max-[768px]:h-[25vh] w-auto max-[768px]:w-[50vw] bg-white rounded-full"
+              className="h-[15vh] max-[768px]:h-[25vh] w-auto max-[768px]:w-[50vw] bg-white rounded-xl"
             />
             <p className="text-blue-200 max-[768px]:text-center">
               Conectando negocios globalmente con soluciones logísticas

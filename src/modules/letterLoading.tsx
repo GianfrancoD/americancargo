@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import logosinfondo from "../assets/logosinfondo.png";
+import logosinfondo from "../assets/logoZOOM2.png";
 
 export function LoadingScreen() {
   return (
-    <div className="fixed inset-0 bg-gradient-to-b from-blue-500 to-gray-300 flex items-center justify-center">
+    <div className="fixed inset-0 bg-white flex items-center justify-center">
       <div className="text-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -13,10 +13,10 @@ export function LoadingScreen() {
         >
           <img
             src={logosinfondo}
-            alt="Suramérica Cargo Logo"
+            alt="Suramérica Cargo y envios"
             width={300}
             height={300}
-            className="mx-auto bg-white rounded-full"
+            className="mx-auto bg-white rounded-2xl"
           />
         </motion.div>
         <motion.div
@@ -28,7 +28,7 @@ export function LoadingScreen() {
             {[0, 1, 2, 3, 4, 5].map((index) => (
               <motion.div
                 key={index}
-                className="w-4 h-4 bg-white rounded-full"
+                className="w-4 h-4 bg-blue-500/40 rounded-full"
                 animate={{
                   y: ["0%", "-60%", "0%"],
                 }}
