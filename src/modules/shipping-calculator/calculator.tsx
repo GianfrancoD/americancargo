@@ -30,13 +30,13 @@ export function ShippingCalculator() {
     Country,
     { aereo: number; maritimo: number; terrestre: number }
   > = {
-    colombia: { aereo: 49.9, maritimo: 9, terrestre: 9 },
-    peru: { aereo: 49.9, maritimo: 9, terrestre: 9 },
-    ecuador: { aereo: 49.9, maritimo: 9, terrestre: 9 },
-    usa: { aereo: 49.9, maritimo: 9, terrestre: 9 },
-    spain: { aereo: 49.9, maritimo: 9, terrestre: 9 },
-    china: { aereo: 49.9, maritimo: 9, terrestre: 9 },
-    venezuela: { aereo: 49.9, maritimo: 9, terrestre: 9 },
+    colombia: { aereo: 49.9, maritimo: 0, terrestre: 0 },
+    peru: { aereo: 49.9, maritimo: 0, terrestre: 0 },
+    ecuador: { aereo: 49.9, maritimo: 0, terrestre: 0 },
+    usa: { aereo: 49.9, maritimo: 0, terrestre: 0 },
+    spain: { aereo: 49.9, maritimo: 0, terrestre: 0 },
+    china: { aereo: 49.9, maritimo: 0, terrestre: 0 },
+    venezuela: { aereo: 49.9, maritimo: 0, terrestre: 0 },
   };
 
   const calculateShipping = (e: React.FormEvent) => {
@@ -66,13 +66,13 @@ export function ShippingCalculator() {
 
     switch (shippingType) {
       case "aereo":
-        cost = originRates.aereo * weight + (volume / 5000) * 10.9;
+        cost = originRates.aereo * weight + volume / 5000 / 10.9;
         break;
       case "maritimo":
-        cost = originRates.maritimo * weight + (volume / 5000) * 9;
+        cost = originRates.maritimo * weight + volume / 5000 / 9;
         break;
       case "terrestre":
-        cost = originRates.terrestre * weight + (volume / 5000) * 10.5;
+        cost = originRates.terrestre * weight + volume / 5000 / 10.5;
         break;
       default:
         break;
