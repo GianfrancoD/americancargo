@@ -5,6 +5,10 @@ import { TermsModal } from "../modals/modalsFooters";
 
 export function Footer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const Viewes = () => {
+    window.open("/terminos2.pdf", "_blank");
+  };
   return (
     <footer
       className="bg-gradient-to-b from-blue-900 to-blue-500 text-white py-16"
@@ -1252,7 +1256,8 @@ export function Footer() {
             <div className="relative mt-12 pt-5 border-t border-white/50 text-sm min-w-[320px]:w-28 w-28">
               <button
                 className="text-blue-100/50 hover:text-blue-800"
-                onClick={() => setIsModalOpen(true)}
+                // onClick={() => setIsModalOpen(true)}
+                onClick={Viewes}
               >
                 Terminos y Condiciones
               </button>

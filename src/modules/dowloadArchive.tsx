@@ -12,17 +12,17 @@ export const Download: FC<DownloadProps> = ({ blob, filename }) => {
   const handleDownload = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch(filename);
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
+      // const response = await fetch(filename);
+      // const blob = await response.blob();
+      // const url = window.URL.createObjectURL(blob);
       // const anchor = document.createElement("a");
       // anchor.href = url;
       // anchor.download = "Terminos-Condiciones.pdf";
       // anchor.click();
-      window.open(url, "_blank");
-      setTimeout(() => {
-        window.URL.revokeObjectURL(url);
-      }, 100);
+      window.open(filename, "_blank");
+      // setTimeout(() => {
+      //   window.URL.revokeObjectURL(filename);
+      // }, 100);
     } catch (error) {
       console.error("Error al descargar el archivo:", error);
     } finally {

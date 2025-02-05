@@ -8,6 +8,10 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const Viewes = () => {
+    window.open("/terminos2.pdf", "_blank");
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -1289,7 +1293,8 @@ export function Navbar() {
               <Book width={16} />
               <button
                 className="text-blue-500 hover:text-blue-900"
-                onClick={() => setIsModalOpen(true)}
+                // onClick={() => setIsModalOpen(true)}
+                onClick={Viewes}
               >
                 Terminos y Condiciones
               </button>

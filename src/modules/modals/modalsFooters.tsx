@@ -1,6 +1,6 @@
 import { X } from "lucide-react";
 import type React from "react";
-import { Download } from "../dowloadArchive";
+// import { Download } from "../dowloadArchive";
 import { FC } from "react";
 
 interface ModalProps {
@@ -30,8 +30,16 @@ export const TermsModal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
         <h2 className="text-2xl font-bold mb-4 text-blue-500">
           Términos y Condiciones
         </h2>
+
+        <iframe
+          src={fileLink}
+          width="100%"
+          height="500px"
+          className="border border-gray-300 rounded"
+          title="Términos y Condiciones"
+        ></iframe>
         <div className="text-gray-600 space-y-4">
-          {children || (
+          {/* {children || (
             <>
               <p>
                 Bienvenido a nuestros Términos y Condiciones. Por favor, lea
@@ -52,13 +60,13 @@ export const TermsModal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
                 Términos en cualquier momento.
               </p>
             </>
-          )}
+          )} */}
         </div>
         <div className="mt-6 flex flex-col sm:flex-row justify-between items-center max-[425px]:gap-3">
-          <Download filename={fileLink} />
+          {/* <Download filename={fileLink} /> */}
           <button
             onClick={onClose}
-            className="mb-2 sm:mb-0 sm:mr-2 px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-700 transition-colors duration-200"
+            className=" mb-2 sm:mb-0 sm:mr-2 px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-700 transition-colors duration-200"
           >
             Cerrar
           </button>
