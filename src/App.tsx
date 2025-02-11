@@ -1,6 +1,7 @@
 // src/app/page.tsx o donde estés definiendo tus rutas
 import "./App.css";
 import { AboutUs } from "./modules/about/about-us";
+import { ComplaintsContacts } from "./modules/contact/complaint";
 import { FeaturedImages } from "./modules/focus/focus";
 import { Footer } from "./modules/footers/footer";
 import { Hero } from "./modules/heros/hero";
@@ -15,6 +16,16 @@ import { Tracking } from "./modules/tracking/trackings";
 import { WhatsAppButton } from "./modules/WhatsAppButton";
 
 function App() {
+  const handleFormSubmit = (data: {
+    claimTitle: string;
+    name: string;
+    trackingNumber: string;
+    nationality: string;
+    complaint: string;
+  }) => {
+    console.log("Datos de la reclamación:", data);
+  };
+
   return (
     <RootLayout>
       <Navbar />
@@ -49,6 +60,14 @@ function App() {
       </section>
 
       <WhatsAppButton phoneNumber="+51927613970" />
+
+      <section
+        id="complaints"
+        className="py-0 bg-gradient-to-b from-white to-blue-50"
+      >
+        <ComplaintsContacts onSubmit={handleFormSubmit} />
+      </section>
+
       <SocialMedia />
       <Footer />
     </RootLayout>
