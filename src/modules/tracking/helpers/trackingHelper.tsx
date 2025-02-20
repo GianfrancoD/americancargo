@@ -5,9 +5,9 @@ export interface TrackingItem {
 }
 
 export interface TrackingHelper {
-  trackingNumber: string[] | string | number;
+  trackingNumber: string;
   trackingResult: TrackingItem[] | null;
   loading: boolean;
   error: string | null;
-  guia_courier?: any;
+  guiaCourier: string | null;
 }

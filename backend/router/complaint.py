@@ -73,7 +73,7 @@ def send_mail(claim_data):
         'claimTitle': ud(str(claim_data['claimTitle']))
     }
     msg = Message(
-        subject="Reclamo: " + claim_data['claimTitle'],
+        subject=claim_data['claimTitle'],
         sender=os.getenv('MAIL_USERNAME'),
         recipients=[os.getenv('OTHER_MAIL_USERNAME')]
     )
@@ -111,6 +111,4 @@ def check_smtp_server():
         print(f"Error resolviendo nombre del servidor: {e}")
     except socket.error as e:
         print(f"Error conectando al servidor: {e}")
-
-# Añade esta función después de tu configuración y llámala
 check_smtp_server()

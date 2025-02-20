@@ -5,10 +5,11 @@ import { Box } from "lucide-react";
 
 export const Tracking = () => {
   const [state, setState] = useState<TrackingHelper>({
-    trackingNumber: [],
+    trackingNumber: "",
     trackingResult: null,
     loading: false,
     error: null,
+    guiaCourier: "",
   });
 
   return (
@@ -81,11 +82,11 @@ export const Tracking = () => {
                   </p>
                 </div>
               ))}
-              {state.guia_courier && (
+              {state.guiaCourier && (
                 <div className="bg-blue-500/70 px-9 py-2 rounded">
                   <Box className="absolute left-[26rem] text-white" />
                   <strong className="text-white">Guía de Retiro:</strong>
-                  <p className="text-white">{state.guia_courier}</p>
+                  <p className="text-white">{state.guiaCourier}</p>
                 </div>
               )}
             </div>
