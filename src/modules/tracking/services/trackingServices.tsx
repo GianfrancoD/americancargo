@@ -3,11 +3,15 @@ import { TrackingHelper } from "../helpers/trackingHelper";
 
 export const handleServices = async (
   e: React.FormEvent,
-  state: any,
+  state: TrackingHelper,
   setState: React.Dispatch<React.SetStateAction<TrackingHelper>>
 ) => {
   e.preventDefault();
-  setState((prev) => ({ ...prev, loading: true, error: null }));
+  setState((prev) => ({
+    ...prev,
+    loading: true,
+    error: null,
+  }));
 
   try {
     const response = await axios.post(
@@ -16,25 +20,33 @@ export const handleServices = async (
       {
         headers: {
           "Content-Type": "application/json",
+          Accept: "application/json",
         },
       }
     );
     console.log("Response from API:", response.data);
 
     if (response.status === 200) {
-      const data = response.data;
-      if (data.status === "ok") {
-        console.log(data.tracking);
+      let data = response.data;
+
+      if (response.data.status === "ok") {
+        const trackingResult = data.tracking;
+        const guiaCourier = data.guia_courier || null;
+        console.log("state: ", state);
+        console.log(`prueba Guia: `, data.guia_courier);
+        console.log(`Prueba tracking: `, data.tracking);
+
         setState((prev) => ({
           ...prev,
-          trackingResult: data.tracking,
+          trackingResult: trackingResult,
+          guiaCourier: guiaCourier,
           loading: false,
         }));
       } else {
         setState((prev) => ({
           ...prev,
           trackingResult: null,
-          error: data.mensaje || "Error desconocido",
+          error: response.data.mensaje || "Error desconocido",
           loading: false,
         }));
       }

@@ -1,10 +1,15 @@
 import { Facebook, Instagram, MapPin, Phone, Mail } from "lucide-react";
 import logotipoFooter from "../../assets/logoZOOM3.jpeg";
+import { scrollToAll } from "../../services/scrollServices";
 
-export function Footer() {
+interface FooterProps {
+  openModal: () => void;
+}
+export function Footer({ openModal }: FooterProps) {
   const Viewes = () => {
     window.open("/terminos2.pdf", "_blank");
   };
+
   return (
     <footer
       className="bg-gradient-to-b from-blue-900 to-blue-500 text-white py-16"
@@ -27,28 +32,36 @@ export function Footer() {
             <h3 className="text-xl font-semibold mb-2">Servicios</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#services"
+                <button
+                  onClick={() => scrollToAll("servicios")}
                   className="text-blue-200 hover:text-white transition-colors"
                 >
                   Envío Aéreo
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#services"
+                <button
+                  onClick={() => scrollToAll("servicios")}
                   className="text-blue-200 hover:text-white transition-colors"
                 >
                   Envío Marítimo
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="#services"
+                <button
+                  onClick={() => scrollToAll("servicios")}
                   className="text-blue-200 hover:text-white transition-colors"
                 >
                   Envío Terrestre
-                </a>
+                </button>
+              </li>
+              <li>
+                <button
+                  className="text-blue-200 hover:text-white transition-colors"
+                  onClick={openModal}
+                >
+                  Reclamaciones
+                </button>
               </li>
             </ul>
             <div className="relative mt-12 pt-5 border-t border-white/50 text-sm min-w-[320px]:w-28 w-28">

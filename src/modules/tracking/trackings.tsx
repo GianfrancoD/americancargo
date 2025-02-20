@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { handleServices } from "./services/trackingServices";
 import { TrackingHelper } from "./helpers/trackingHelper";
+import { Box } from "lucide-react";
 
 export const Tracking = () => {
   const [state, setState] = useState<TrackingHelper>({
@@ -66,6 +67,7 @@ export const Tracking = () => {
               <h3 className="text-xl font-semibold text-blue-800 mb-2">
                 Estado del Envío
               </h3>
+
               {state.trackingResult.map((item: any, index: number) => (
                 <div key={index} className="mb-4">
                   <p>
@@ -79,8 +81,16 @@ export const Tracking = () => {
                   </p>
                 </div>
               ))}
+              {state.guia_courier && (
+                <div className="bg-blue-500/70 px-9 py-2 rounded">
+                  <Box className="absolute left-[26rem] text-white" />
+                  <strong className="text-white">Guía de Retiro:</strong>
+                  <p className="text-white">{state.guia_courier}</p>
+                </div>
+              )}
             </div>
           )}
+
           {state.trackingResult && state.trackingResult.length === 0 && (
             <div className="mt-8 p-6 bg-blue-50 rounded-lg border border-blue-200">
               <h3 className="text-xl font-semibold text-blue-800 mb-2">
