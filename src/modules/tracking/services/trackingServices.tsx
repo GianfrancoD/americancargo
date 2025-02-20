@@ -32,14 +32,17 @@ export const handleServices = async (
       if (response.data.status === "ok") {
         const trackingResults = data.tracking;
         const guiaCourier = data.guia_courier || null;
+        const guiaReferencia = data.referencia || null;
         console.log("state: ", state);
         console.log(`prueba Guia: `, guiaCourier);
+        console.log(`prueba referencias: `, guiaReferencia);
         console.log(`Prueba tracking: `, trackingResults);
 
         setState((prev) => ({
           ...prev,
           trackingResult: trackingResults,
           guiaCourier: guiaCourier,
+          guiaReferencia: guiaReferencia,
           loading: false,
         }));
       } else {

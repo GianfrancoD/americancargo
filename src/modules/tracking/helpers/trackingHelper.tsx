@@ -9,5 +9,6 @@ export interface TrackingHelper {
   trackingResult: TrackingItem[] | null;
   loading: boolean;
   error: string | null;
-  guiaCourier: string | null;
+  guiaCourier: number | null;
+  guiaReferencia: string;
 }

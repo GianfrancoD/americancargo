@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { handleServices } from "./services/trackingServices";
 import { TrackingHelper } from "./helpers/trackingHelper";
-import { Box } from "lucide-react";
+import { Box, Link2 } from "lucide-react";
 
 export const Tracking = () => {
   const [state, setState] = useState<TrackingHelper>({
@@ -9,7 +9,8 @@ export const Tracking = () => {
     trackingResult: null,
     loading: false,
     error: null,
-    guiaCourier: "",
+    guiaCourier: null,
+    guiaReferencia: "",
   });
 
   return (
@@ -82,11 +83,23 @@ export const Tracking = () => {
                   </p>
                 </div>
               ))}
+
               {state.guiaCourier && (
-                <div className="bg-blue-500/70 px-9 py-2 rounded">
-                  <Box className="absolute left-[26rem] text-white" />
-                  <strong className="text-white">Guía de Retiro:</strong>
-                  <p className="text-white">{state.guiaCourier}</p>
+                <div className="bg-blue-500/70 px-9 py-2 rounded relative ">
+                  <div className="flex flex-wrap max-[425px]:gap-0 max-[425px]:text-sm max-[425px]:justify-center gap-1">
+                    <Box className=" absolute left-2.5 top-1.5 max-[375px]:top-4 min-[768px]:top-2 text-white" />
+                    <strong className="text-white">Guía de Retiro:</strong>
+                    <p className="text-white">{state.guiaCourier}</p>
+                  </div>
+                </div>
+              )}
+              {state.guiaReferencia && (
+                <div className=" px-9 py-2 relative rounded ">
+                  <div className="flex flex-wrap max-[425px]:gap-0 max-[425px]:text-sm max-[425px]:justify-center gap-1">
+                    <Link2 className=" absolute left-2.5 top-1.5 max-[375px]:top-4 min-[768px]:top-2 text-blue-500/70" />
+                    <strong className="text-blue-500/70">Referencia:</strong>
+                    <p className="text-blue-500/70">{state.guiaReferencia}</p>
+                  </div>
                 </div>
               )}
             </div>
