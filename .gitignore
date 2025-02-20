@@ -42,4 +42,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+*.pyc
+__pycache__/
+.venv/
+venv/
+ENV/
 
