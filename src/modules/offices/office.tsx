@@ -20,7 +20,7 @@ export const Offices = () => {
     {
       city: "Los Olivos",
       address:
-        "Av. Alfredo Mendiola 3471, frnte a Meda Plaza, 2do piso Galeria Dolares",
+        "Av. Alfredo Mendiola 3471, frente a Meda Plaza, 2do piso Galeria Dolares",
       phone: "",
       icon: <MapPin className="w-6 h-6 text-blue-500" />,
     },
@@ -40,13 +40,14 @@ export const Offices = () => {
     {
       city: "Cercado de Lima",
       address:
-        "Av. Grau con Avancay, Stand 1069 Cercado de Lima. C.C. Señor de Luren",
+        "Av. Grau con Abancay, Stand 1069 Cercado de Lima. C.C. Señor de Luren",
       phone: "",
       icon: <MapPin className="w-6 h-6 text-blue-500" />,
     },
     {
       city: "Chorrillos",
-      address: "Av. Defensores del Morro 666, Galeria Huayla Chorrillos",
+      address:
+        "Av. Defensores del Morro 666, Galeria Huaylas, Distrito Chorrillos",
       phone: "",
       icon: <MapPin className="w-6 h-6 text-blue-500" />,
     },

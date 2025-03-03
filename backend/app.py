@@ -14,7 +14,7 @@ from router.complaint import reclamos
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000"}}) 
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:3000","methods": ["POST"]}}) 
 
 mail_config = get_mail_config()
 app.config.update(mail_config)

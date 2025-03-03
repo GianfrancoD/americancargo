@@ -64,6 +64,7 @@ def create_complaint():
         finally:
             session.close()
 
+
 def send_mail(claim_data):
     sanitized_data = {
         'name': ud(str(claim_data['name'])),
@@ -72,19 +73,53 @@ def send_mail(claim_data):
         'complaint': ud(str(claim_data['complaint'])),
         'claimTitle': ud(str(claim_data['claimTitle']))
     }
+    
     msg = Message(
         subject=claim_data['claimTitle'],
         sender=os.getenv('MAIL_USERNAME'),
         recipients=[os.getenv('OTHER_MAIL_USERNAME')]
     )
     
-    msg.body = """
-    Nuevo Reclamo
-
-    Nombre: {}
-    Numero de Guia: {}
-    Nacionalidad: {}
-    Descripcion del Reclamo: {}
+    msg.html = """
+    <html>
+        <body style="font-family: Arial, sans-serif; background-color: #f0f0f0; padding: 20px;">
+            <div style="width: 80%; margin: auto; background-color: #fff; padding: 40px; border: 1px solid #ddd; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <img src="https://enviointernacionales.com/static/media/logoZOOM3.2e82a69349f229570b46.jpeg" alt="Logo de la Empresa" style="width: 250px; height: auto;">
+                </div>
+                <h2 style="color: #2c3e50; font-weight: bold; margin-bottom: 20px;">Notificación de Reclamo</h2>
+                <div style="background-color: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 10px; margin-bottom: 20px;">
+                    <div style="margin-bottom: 15px;">
+                        <strong style="font-size: 16px; color:blue;">Detalles del Reclamo</strong>
+                    </div>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd; width: 30%; font-weight: bold">Nombre del Cliente:</td>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd;">{}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd; font-weight: bold">Número de Guía:</td>
+                            <td style="padding: 10px; border-bottom: 1px solid #ddd;">{}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; font-weight: bold">Nacionalidad:</td>
+                            <td style="padding: 10px;">{}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="background-color: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 10px;">
+                    <div style="margin-bottom: 15px;">
+                        <strong style="font-size: 16px; color:blue;">Descripción del Reclamo</strong>
+                    </div>
+                    <p style="font-size: 14px;">{}</p>
+                </div>
+                <div style="margin-top: 20px; text-align: center;">
+                    <p style="font-size: 14px;">Agradecemos su confianza en nuestros servicios. Si necesita más información o asistencia, no dude en contactarnos.</p>
+                    <p style="font-size: 14px;">Atentamente, EnvioInternacionales</p>
+                </div>
+            </div>
+        </body>
+    </html>
     """.format(
         sanitized_data['name'],
         sanitized_data['trackingNumber'],
@@ -92,7 +127,10 @@ def send_mail(claim_data):
         sanitized_data['complaint']
     )
     
-    mail.send(msg)
+    try:
+        mail.send(msg)
+    except Exception as e:
+        print(f"Error al enviar el correo electrónico: {str(e)}")
 
     import socket
 

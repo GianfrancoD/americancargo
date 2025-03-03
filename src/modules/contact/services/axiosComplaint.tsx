@@ -3,7 +3,7 @@ import axios from "axios";
 export const axiosServiceComplaint = async (claimData: any) => {
   try {
     const response = await axios.post(
-      `${process.env.REACT_APP_API_URL}/api/v1/complaint`,
+      `${process.env.REACT_APP_API_URL}api/v1/complaint`,
       { claimData },
       {
         headers: {
